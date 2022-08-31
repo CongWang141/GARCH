@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Cong Wang https://congwang.carrd.co/" />
+<meta name="author" content="Cong Wang https://congwang.org/" />
 
 <meta name="date" content="2022-08-04" />
 
@@ -1511,7 +1511,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">GARCH Model with R</h1>
-<h4 class="author">Cong Wang <a href="https://congwang.carrd.co/" class="uri">https://congwang.carrd.co/</a></h4>
+<h4 class="author">Cong Wang <a href="https://congwang.org/" class="uri">https://congwang.org/</a></h4>
 <h4 class="date">2022-08-04</h4>
 
 </div>
@@ -1536,10 +1536,8 @@ Heteroskedasticity model) describes the variance of the current error
 term follows an <strong>ARMA</strong> model (Autoregressive Moving
 Average) instead of constant.</p>
 <p><span class="math display">\[y_t = x_t + \epsilon_t\]</span> <span class="math inline">\(y_t\)</span> is a stock return, <span class="math inline">\(x_t\)</span> is a mean reverting process, and
-<span class="math inline">\(\epsilon_t\)</span> is the error term.
-Usually <span class="math inline">\(\epsilon_t \sim N(0,
-\delta_t)\)</span> and <span class="math inline">\(\delta_t\)</span> is
-constant. But in GARCH model <span class="math inline">\(\delta_t\)</span> is time-varying and follow an
+<span class="math inline">\(\epsilon_t\)</span> is the error term. <span class="math inline">\(\epsilon_t=\sqrt{\delta^2}z_t\)</span>, where
+<span class="math inline">\(z_t \sim D(0,1)\)</span> and <span class="math inline">\(D\)</span> is a specified distribution. <span class="math inline">\(\delta_t\)</span> is time-varying and follow an
 ARMA process as follow: <span class="math display">\[\delta_t = \omega +
 \alpha_1 \epsilon^2_{t-1} + ... + \alpha_q \epsilon^2_{t-q} + \beta_1
 \delta^2_{t-1} +...+ \beta_p \delta^2_{t-p}\]</span></p>
@@ -1738,7 +1736,7 @@ fit_garch</code></pre>
 ## 4    50      8988            0
 ## 
 ## 
-## Elapsed time : 0.2483032</code></pre>
+## Elapsed time : 0.2733741</code></pre>
 </div>
 </div>
 
